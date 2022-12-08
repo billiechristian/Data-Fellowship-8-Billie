@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dbt-bq-dtc:
+    build:
+      context: .
+      target: dbt-bigquery
+    image: dbt/bigquery
+    volumes:
+      - .:/usr/app
+      - ~/.dbt/:/root/.dbt/
+      - ~/.google/credentials/google_credentials_dtc_de.json:/.google/credentials/google_credentials.json
+    network_mode: host
+
+# CLI for accessing dbt in docker compose
+# docker compose run -it --entrypoint=bash --workdir="//usr/app/dbt/taxi_rides_ny" dbt-bq-dtc
