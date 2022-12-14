@@ -1,0 +1,9 @@
+2022-12-14 14:38:14 | tweepy.streaming - INFO - Stream connected
+2022-12-14 14:38:14 | tweepy.streaming - ERROR - Stream encountered an exception
+Traceback (most recent call last):
+  File "C:\Users\Billie\anaconda3\lib\site-packages\tweepy\streaming.py", line 94, in _connect
+    self.on_data(line)
+  File "C:\Billie Christian\ITB\Tutorials\IYKRA Data Fellowship Batch 8\Data-Fellowship-8-Billie-git\Modul 7\kafka_producer.py", line 62, in on_data
+    'id': raw_data.id,
+AttributeError: 'bytes' object has no attribute 'id'
+2022-12-14 14:38:14 | tweepy.streaming - INFO - Stream disconnected
