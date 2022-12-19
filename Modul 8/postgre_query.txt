@@ -1,0 +1,16 @@
+CREATE TABLE driver_profiles (
+  driver_id integer PRIMARY KEY,
+  make text,
+  model text,
+  year integer,
+  license_plate text,
+  rating float
+);
+
+INSERT INTO driver_profiles (driver_id, make, model, year, license_plate, rating) VALUES
+  (0, 'Honda', 'Mobilio',   2019, 'JHNNS', 5.00),
+  (1, 'Hyundai', 'Stargazer', 2017, 'JSPH', 4.89),
+  (2, 'Wuling',  'Air Ev', 2019, 'BLL',  4.92),
+  (3, 'Honda', 'Brio',   2018, 'CHRSTN', 4.85);
+
+  
